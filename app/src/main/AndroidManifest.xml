@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login_murid"></activity>
+        <activity android:name=".login_murid" />
+        <activity android:name=".daftar_aktivity" />
+        <activity android:name=".lesPrivate"></activity>
     </application>
 
 </manifest>
