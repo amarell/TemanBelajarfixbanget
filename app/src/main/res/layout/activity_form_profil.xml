@@ -215,7 +215,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
-        android:text="Isi data diri anda"
+        android:text="Lengkapi data diri anda"
         android:textColor="#FFF"
         android:textSize="20sp" />
 

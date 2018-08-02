@@ -74,6 +74,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/btn_daftar"
             android:layout_marginTop="20dp"
             android:textColor="#FFF"
             android:background="@drawable/rec_gradient"
