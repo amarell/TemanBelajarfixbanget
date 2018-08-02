@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jenjang">
+        <item>SD</item>
+        <item>SMP</item>
+        <item>SMA</item>
+        <item>Umum</item>
+    </string-array>
+
+</resources>
