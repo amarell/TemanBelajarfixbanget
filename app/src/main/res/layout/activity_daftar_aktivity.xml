@@ -41,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/Et_nama_regis"
             android:drawablePadding="20dp"
             android:drawableRight="@drawable/ic_person"
             android:hint="Nama Anda"
@@ -52,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/Et_email_regis"
             android:drawablePadding="20dp"
             android:drawableRight="@drawable/ic_email"
             android:hint="temanbelajar@gmail.com"
@@ -62,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/Et_hp_regis"
             android:drawablePadding="20dp"
             android:drawableRight="@drawable/ic_phone"
             android:hint="0821xxxxxxx"
@@ -77,6 +80,7 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
             <EditText
+                android:id="@+id/Et_pass_regis"
                 android:hint="*******"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,14 +97,21 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
             <EditText
+                android:id="@+id/Et_passcon_regis"
                 android:hint="*******"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
 
-
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
         <Button
+            android:id="@+id/btn_daftar_regis"
             android:layout_marginTop="20dp"
             android:textColor="#FFF"
             android:background="@drawable/rec_gradient"
