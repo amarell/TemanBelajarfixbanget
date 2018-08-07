@@ -30,7 +30,7 @@ public class daftar_aktivity extends AppCompatActivity {
     private Button btn_regist;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "https://buburwakhid.000webhostapp.com/magang/register.php";
+    private static String URL_REGIST = "http://10.11.9.190/temanbelajar/register.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +42,7 @@ public class daftar_aktivity extends AppCompatActivity {
         hp=findViewById(R.id.Et_hp_regis);
         password=findViewById(R.id.Et_pass_regis);
         c_password=findViewById(R.id.Et_passcon_regis);
-        btn_regist=(Button) findViewById(R.id.btn_daftar_regis);
+        btn_regist= findViewById(R.id.btn_daftar_regis);
 
         back_logo=findViewById(R.id.back_logo);
         back_logo.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +78,14 @@ public class daftar_aktivity extends AppCompatActivity {
                             String success = jsonObject.getString("success");
 
                             if(success.equals("1")){
+                                loading.setVisibility(View.GONE);
+                                btn_regist.setVisibility(View.VISIBLE);
                                 Toast.makeText(daftar_aktivity.this, "Register berhasil", Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(daftar_aktivity.this, "Register gagal" + e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(daftar_aktivity.this, "Register gagal " + e.toString(), Toast.LENGTH_SHORT).show();
                             loading.setVisibility(View.GONE);
                             btn_regist.setVisibility(View.VISIBLE);
                         }
@@ -92,7 +94,7 @@ public class daftar_aktivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(daftar_aktivity.this, "Register gagal" + error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(daftar_aktivity.this, " gagal " + error.toString(), Toast.LENGTH_SHORT).show();
                         loading.setVisibility(View.GONE);
                         btn_regist.setVisibility(View.VISIBLE);
                     }

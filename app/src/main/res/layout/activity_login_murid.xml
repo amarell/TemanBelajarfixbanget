@@ -43,12 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:id="@+id/Et_email_login"
             android:drawablePadding="20dp"
             android:drawableRight="@drawable/ic_email"
             android:hint="temanbelajar@gmail.com"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
+
             android:layout_marginTop="5dp"
             android:text="Password "
             android:layout_width="wrap_content"
@@ -58,13 +60,21 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true">
             <EditText
+                android:id="@+id/Et_pass_login"
                 android:hint="*******"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
+        <ProgressBar
+            android:id="@+id/loading_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_marginTop="20dp"
             android:textColor="#FFF"
             android:background="@drawable/hijau_background"
@@ -72,6 +82,7 @@
             android:text="Masuk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
 
         <Button
             android:id="@+id/btn_daftar"
