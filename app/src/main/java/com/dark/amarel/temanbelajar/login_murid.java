@@ -31,10 +31,13 @@ public class login_murid extends AppCompatActivity {
     private Button btnlogin;
     private ProgressBar loading;
     private static String URL_LOGIN = "http://192.168.3.12/temanbelajar/login.php";
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_murid);
+
+        sessionManager=new SessionManager(this);
 
         mButtonStart= (Button)findViewById(R.id.btn_daftar);
         email = findViewById(R.id.Et_email_login);
@@ -102,6 +105,8 @@ public class login_murid extends AppCompatActivity {
 
                                     String nama = object.getString("nama").trim();
                                     String email = object.getString("email").trim();
+
+                                    sessionManager.createSession(nama, email);
 
                                     Toast.makeText(login_murid.this, "Login Berhasil. \nNama Anda: "+nama+ "\nEmail anda: " + email, Toast.LENGTH_SHORT).show();
                                     loading.setVisibility(View.GONE);
