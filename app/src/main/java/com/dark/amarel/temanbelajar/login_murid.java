@@ -30,7 +30,7 @@ public class login_murid extends AppCompatActivity {
     private EditText email, password;
     private Button btnlogin;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://10.11.9.190/temanbelajar/login.php";
+    private static String URL_LOGIN = "http://192.168.3.12/temanbelajar/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,7 +106,9 @@ public class login_murid extends AppCompatActivity {
                                     Toast.makeText(login_murid.this, "Login Berhasil. \nNama Anda: "+nama+ "\nEmail anda: " + email, Toast.LENGTH_SHORT).show();
                                     loading.setVisibility(View.GONE);
                                     btnlogin.setVisibility(View.VISIBLE);
-                                    Intent intent=new Intent(login_murid.this,HalamanUtama.class);
+                                    Intent intent=new Intent(login_murid.this,Home.class);
+                                    intent.putExtra("name", nama);
+                                    intent.putExtra("email", email);
                                     startActivity(intent);
 
 
