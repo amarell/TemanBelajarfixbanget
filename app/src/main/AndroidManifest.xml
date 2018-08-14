@@ -26,7 +26,8 @@
             android:name=".HalamanUtama"
             android:label="@string/title_activity_halaman_utama"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Dashboard"></activity>
     </application>
 
 </manifest>
