@@ -5,13 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.TextView;
+
+import java.util.HashMap;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
     private CardView materi_sekolah, keterampilan, bahasa_asing, komputerisasi, musik, olahraga;
+    private TextView nama, email;
+    SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        sessionManager= new SessionManager(this);
+        sessionManager.cekLogin();
 
         //defining card
         materi_sekolah = (CardView) findViewById(R.id.materi_sekolah);
@@ -28,6 +35,17 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         komputerisasi.setOnClickListener(this);
         musik.setOnClickListener(this);
         olahraga.setOnClickListener(this);
+
+        nama = findViewById(R.id.namauser);
+        email= findViewById(R.id.mailuser);
+
+        HashMap<String, String> user = sessionManager.getUserDetail();
+
+        String exNama=  user.get(sessionManager.NAME);
+        String exEmail= user.get(sessionManager.EMAIL);
+
+        nama.setText(exNama);
+        email.setText(exEmail);
     }
 
     @Override

@@ -112,7 +112,7 @@ public class login_murid extends AppCompatActivity {
                                     Toast.makeText(login_murid.this, "Login Berhasil. \nNama Anda: "+nama+ "\nEmail anda: " + email, Toast.LENGTH_SHORT).show();
                                     loading.setVisibility(View.GONE);
                                     btnlogin.setVisibility(View.VISIBLE);
-                                    Intent intent=new Intent(login_murid.this,Home.class);
+                                    Intent intent=new Intent(login_murid.this,Dashboard.class);
                                     intent.putExtra("name", nama);
                                     intent.putExtra("email", email);
                                     startActivity(intent);

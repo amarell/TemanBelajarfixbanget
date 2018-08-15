@@ -18,13 +18,41 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp">
+        android:layout_height="230dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient"
+        android:src="@drawable/background_gradient">
 
-        <ImageView
-            android:layout_width="600dp"
-            android:layout_height="230dp"
-            android:src="@drawable/background_gradient" />
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp" />
+        <TextView
+            android:id="@+id/namauser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Nama"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/mailuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="email"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
