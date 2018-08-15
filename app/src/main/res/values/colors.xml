@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#3b6cff</color>
     <color name="colorBackground">#fcfcfc</color>
+    <color name="colorBackground2">#42a7f4</color>
     <color name="colorLightGray">#ededed</color>
     <color name="colorDarkGray">#A9A9A9</color>
     <color name="colorDeepPurple">#7c4dff</color>

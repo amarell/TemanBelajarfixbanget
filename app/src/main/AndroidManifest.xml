@@ -27,7 +27,13 @@
             android:label="@string/title_activity_halaman_utama"
             android:theme="@style/AppTheme" />
         <activity android:name=".Home" />
-        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".Dashboard" />
+        <activity android:name=".detail_materi_sekolah" />
+        <activity android:name=".detail_keterampilan" />
+        <activity android:name=".detail_bahasa_asing" />
+        <activity android:name=".detail_komputerisasi" />
+        <activity android:name=".detail_musik" />
+        <activity android:name=".detail_olahraga"></activity>
     </application>
 
 </manifest>
