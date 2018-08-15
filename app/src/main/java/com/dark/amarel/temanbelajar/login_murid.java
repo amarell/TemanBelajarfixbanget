@@ -30,7 +30,7 @@ public class login_murid extends AppCompatActivity {
     private EditText email, password;
     private Button btnlogin;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.3.12/temanbelajar/login.php";
+    private static String URL_LOGIN = "http://192.168.0.115/temanbelajar/login.php";
     SessionManager sessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +96,7 @@ public class login_murid extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         try {
+                            //dsfa
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
                             JSONArray jsonArray = jsonObject.getJSONArray("login");
