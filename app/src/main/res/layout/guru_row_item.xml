@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#fff">
+
+    <ImageView
+    android:src="@drawable/loading"
+    android:id="@+id/thumbnail"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rowname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Guru"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pendidikan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pendidkan" />
+
+
+
+        <TextView
+            android:id="@+id/studio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Studio" />
+        <TextView
+            android:id="@+id/namamapel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Nama Mapel" />
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="deskripsi" />
+        <TextView
+            android:id="@+id/pengalaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="pengalaman" />
+
+    </LinearLayout>
+
+</LinearLayout>

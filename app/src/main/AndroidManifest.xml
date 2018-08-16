@@ -29,7 +29,8 @@
         <activity android:name=".detail_bahasa_asing" />
         <activity android:name=".detail_komputerisasi" />
         <activity android:name=".detail_musik" />
-        <activity android:name=".detail_olahraga"></activity>
+        <activity android:name=".detail_olahraga" />
+        <activity android:name=".activities.ListGuru"></activity>
     </application>
 
 </manifest>
