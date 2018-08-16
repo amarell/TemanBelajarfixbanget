@@ -112,11 +112,4 @@
         android:layout_width="250dp"
         android:layout_height="70dp" />
 
-    <ImageView
-        android:layout_width="49dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:src="@drawable/back_logo" />
-
     </RelativeLayout>

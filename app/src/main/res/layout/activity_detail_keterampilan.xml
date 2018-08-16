@@ -4,18 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dashboard"
+    tools:context=".detail_keterampilan"
     android:orientation="vertical"
     android:background="@color/colorBackground2"
     android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="0dp">
+        android:padding="2dp">
 
-    <LinearLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:paddingTop="10dp"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo_temanbelajar" />
+
+            <ImageView
+                android:id="@+id/back_logo_keterampilan"
+                android:layout_width="49dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:src="@drawable/back_logo" />
+        </RelativeLayout>
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="Pilih Khursus Keterampilan"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+        android:paddingTop="10dp"
         android:clipToPadding="false"
         android:gravity="center"
         android:layout_width="match_parent"
