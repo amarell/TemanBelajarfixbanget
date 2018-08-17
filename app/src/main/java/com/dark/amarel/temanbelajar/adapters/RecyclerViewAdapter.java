@@ -6,7 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.dark.amarel.temanbelajar.models.DataGuru;
 import com.dark.amarel.temanbelajar.R;
 
@@ -16,10 +20,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context mContext;
     private List<DataGuru> mData;
+    RequestOptions option;
 
     public RecyclerViewAdapter(Context mContext, List<DataGuru> mData) {
         this.mContext = mContext;
         this.mData = mData;
+
+        option=new RequestOptions().centerCrop().placeholder(R.drawable.loading).error(R.drawable.loading);
 
     }
 
@@ -36,6 +43,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
+        holder.tv_nama_guru.setText(mData.get(position).getNama());
+        holder.tv_pendidikan.setText(mData.get(position).getPendidikan());
+        holder.tv_mapel.setText(mData.get(position).getNama_mapel());
+        holder.tv_deskripsi.setText(mData.get(position).getDeskripsi());
+        holder.tv_pengalaman.setText(mData.get(position).getPengalaman());
+
+        Glide.with(mContext).load(mData.get(position).getFoto_profil()).apply(option).into(holder.fotoguru);
 
     }
 
@@ -46,9 +60,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
+        TextView tv_nama_guru, tv_pendidikan, tv_mapel, tv_deskripsi, tv_pengalaman;
+        ImageView fotoguru;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
+
+            tv_nama_guru=itemView.findViewById(R.id.rowname);
+            tv_pendidikan=itemView.findViewById(R.id.pendidikan);
+            tv_mapel=itemView.findViewById(R.id.namamapel);
+            tv_deskripsi=itemView.findViewById(R.id.deskripsi);
+            tv_pengalaman=itemView.findViewById(R.id.pengalaman);
+            fotoguru=itemView.findViewById(R.id.thumbnail);
         }
     }
 }
