@@ -30,7 +30,8 @@
         <activity android:name=".detail_komputerisasi" />
         <activity android:name=".detail_musik" />
         <activity android:name=".detail_olahraga" />
-        <activity android:name=".activities.ListGuru"></activity>
+        <activity android:name=".activities.ListGuru" />
+        <activity android:name=".detail_smp"></activity>
     </application>
 
 </manifest>

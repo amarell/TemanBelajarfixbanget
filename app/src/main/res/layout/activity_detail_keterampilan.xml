@@ -41,9 +41,19 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:text="Pilih Khursus Keterampilan"
+            android:text="Pilih Khursus"
             android:textAlignment="center"
             android:textColor="#FFF"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="Keterampilan"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -55,7 +65,7 @@
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
-            android:id="@+id/manajemen_bisnis"
+            android:id="@+id/public_speaking"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="140dp"
@@ -70,7 +80,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_school_putih"
+                    android:src="@drawable/manajemen_bisnis"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -82,7 +92,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/manajemen_smd_hrd"
+            android:id="@+id/memasak"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="140dp"
@@ -96,15 +106,15 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circlebackgroundred"
-                    android:src="@drawable/ic_drive"
+                    android:background="@drawable/circlebackgroundgreen"
+                    android:src="@drawable/memasak"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Manajemen SMD/HRD"/>
+                    android:text="Memasak"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -118,7 +128,7 @@
         android:orientation="horizontal">
 
         <android.support.v7.widget.CardView
-            android:id="@+id/menjahit"
+            android:id="@+id/menulis_kreatif"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="140dp"
@@ -132,15 +142,15 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_school_putih"
+                    android:background="@drawable/circlebackgroundyellow"
+                    android:src="@drawable/ic_pensil"
                     android:padding="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Menjahit"/>
+                    android:text="Menulis Kreatif"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -172,165 +182,6 @@
         </android.support.v7.widget.CardView>
     </LinearLayout>
 
-        <LinearLayout
-            android:clipToPadding="false"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/menulis_kreatif"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundpurple"
-                        android:src="@drawable/ic_school_putih"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:text="Menulis Kreatif"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/memasak"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundred"
-                        android:src="@drawable/ic_drive"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:text="Memasak"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-
-
-        <LinearLayout
-        android:clipToPadding="false"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/public_speaking"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_margin="10dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_school_putih"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="Public Speaking"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/theater"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:clickable="true"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_margin="10dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/circlebackgroundred"
-                    android:src="@drawable/ic_drive"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="Theater"/>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-
-        <LinearLayout
-            android:clipToPadding="false"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/trading_saham"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundpurple"
-                        android:src="@drawable/ic_school_putih"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:text="Trading Saham"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
 
 
     </LinearLayout>

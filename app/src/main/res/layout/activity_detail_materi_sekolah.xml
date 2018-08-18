@@ -79,7 +79,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/circlebackgroundpurple"
-                        android:src="@drawable/ic_school_putih"
+                        android:src="@drawable/ic_pensil2"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundred"
+                        android:background="@drawable/circlebackgroundgreen"
                         android:src="@drawable/sd"
                         android:padding="10dp"/>
                     <TextView
@@ -141,7 +141,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circlebackgroundpurple"
+                    android:background="@drawable/circlebackgroundyellow"
                     android:src="@drawable/smp"
                     android:padding="10dp"/>
                 <TextView
@@ -206,8 +206,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_school_putih"
-                    android:padding="10dp"/>
+                    android:src="@drawable/sbmptn"
+                    android:padding="0dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
