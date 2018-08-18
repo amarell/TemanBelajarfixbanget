@@ -47,6 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tv_pendidikan.setText(mData.get(position).getPendidikan());
         holder.tv_mapel.setText(mData.get(position).getNama_mapel());
         holder.tv_deskripsi.setText(mData.get(position).getDeskripsi());
+
         holder.tv_pengalaman.setText(mData.get(position).getPengalaman());
 
         Glide.with(mContext).load(mData.get(position).getFoto_profil()).apply(option).into(holder.fotoguru);

@@ -31,16 +31,13 @@ public class ListGuru extends AppCompatActivity {
     private static String URL="http://192.168.0.110/temanbelajar/coba.php";
     private List<DataGuru> listGuru;
     private RecyclerView recyclerView;
-    String id;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_guru);
-
-        Intent intent = getIntent();
-         id = intent.getStringExtra("id");
 
         listGuru = new ArrayList<>();
 
@@ -52,6 +49,9 @@ public class ListGuru extends AppCompatActivity {
     }
 
     private void guruRequest() {
+        Intent intent = getIntent();
+        final String id = intent.getStringExtra("id");
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
                 new Response.Listener<String>() {
                     @Override
