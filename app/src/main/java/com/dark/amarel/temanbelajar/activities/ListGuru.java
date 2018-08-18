@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -28,16 +29,19 @@ import java.util.Map;
 
 public class ListGuru extends AppCompatActivity {
 
-    private static String URL="http://192.168.0.110/temanbelajar/coba.php";
+    private static String URL="http://192.168.3.27/temanbelajar/coba.php";
     private List<DataGuru> listGuru;
     private RecyclerView recyclerView;
 
-
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_guru);
+
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
 
         listGuru = new ArrayList<>();
 
@@ -49,8 +53,8 @@ public class ListGuru extends AppCompatActivity {
     }
 
     private void guruRequest() {
-        Intent intent = getIntent();
-        final String id = intent.getStringExtra("id");
+
+        final String id2 = id;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
                 new Response.Listener<String>() {
@@ -66,7 +70,7 @@ public class ListGuru extends AppCompatActivity {
                                     JSONObject object = jsonArray.getJSONObject(i);
                                     DataGuru dataGuru = new DataGuru();
 
-                                    dataGuru.setId(object.getInt("id"));
+                                    dataGuru.setId(object.getString("id"));
                                     dataGuru.setNama(object.getString("nama"));
                                     dataGuru.setPendidikan(object.getString("pendidikan"));
                                     dataGuru.setNama_mapel(object.getString("nama_mapel"));
@@ -78,10 +82,13 @@ public class ListGuru extends AppCompatActivity {
                                     listGuru.add(dataGuru);
                                 }
 
+                            }else if (success.equals("0")){
+                                Toast.makeText(ListGuru.this, "Belum Ada Guru", Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            Toast.makeText(ListGuru.this, "Error "+e.toString(), Toast.LENGTH_SHORT).show();
                         }
 
                         setuprecyclerview(listGuru);
@@ -91,14 +98,14 @@ public class ListGuru extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(ListGuru.this, "Gagal "+ error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 })
         {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("id", id);
+                params.put("id", id2);
                 return params;
             }
         };

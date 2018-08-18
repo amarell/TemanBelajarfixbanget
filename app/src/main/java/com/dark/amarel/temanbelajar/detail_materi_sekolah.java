@@ -10,7 +10,7 @@ import com.dark.amarel.temanbelajar.activities.ListGuru;
 
 public class detail_materi_sekolah extends AppCompatActivity implements View.OnClickListener{
     CardView sd;
-    int id_sd=2;
+    String id_sd="2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,6 @@ public class detail_materi_sekolah extends AppCompatActivity implements View.OnC
         switch (view.getId()){
             case R.id.sd: i=new Intent(this, ListGuru.class);i.putExtra("id", id_sd
                  );startActivity(i);break;
-
 
             default:break;
         }

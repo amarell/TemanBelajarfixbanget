@@ -2,7 +2,7 @@ package com.dark.amarel.temanbelajar.models;
 
 public class DataGuru {
 
-    private int id;
+    private String id;
     private String nama;
     private String pendidikan;
     private String nama_mapel;
@@ -14,7 +14,7 @@ public class DataGuru {
     public DataGuru() {
     }
 
-    public DataGuru(int id, String nama, String pendidikan, String nama_mapel, String deskripsi, String pengalaman, String prestasi, String foto_profil) {
+    public DataGuru(String id, String nama, String pendidikan, String nama_mapel, String deskripsi, String pengalaman, String prestasi, String foto_profil) {
         this.id = id;
         this.nama = nama;
         this.pendidikan = pendidikan;
@@ -25,7 +25,7 @@ public class DataGuru {
         this.foto_profil = foto_profil;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -57,7 +57,7 @@ public class DataGuru {
         return foto_profil;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
