@@ -3,6 +3,7 @@ package com.dark.amarel.temanbelajar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +31,7 @@ public class daftar_aktivity extends AppCompatActivity {
     private Button btn_regist;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "http://192.168.0.110/temanbelajar/register.php";
+    private static String URL_REGIST = "http://192.168.3.27/temanbelajar/register.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,56 @@ public class daftar_aktivity extends AppCompatActivity {
         btn_regist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String mNama=nama.getText().toString().trim();
+                String mEmail=email.getText().toString().trim();
+                String mHp=hp.getText().toString().trim();
+                String mPass=password.getText().toString().trim();
+                String mCpas=c_password.getText().toString().trim();
+
+                if (mNama.isEmpty()){
+                    nama.setError("Nama Harus Diisi");
+                    nama.requestFocus();
+                    return;
+                }
+
+                if (mEmail.isEmpty()){
+                    email.setError("Email harus Diisi");
+                    email.requestFocus();
+                    return;
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()){
+                    email.setError("Masukan Email Yang Valid");
+                    email.requestFocus();
+                    return;
+                }
+
+                if (mHp.isEmpty()){
+                    hp.setError("No. Hp Harus Diisi");
+                    hp.requestFocus();
+                    return;
+                }
+                if (mPass.isEmpty()){
+                    password.setError("Password Harus Diisi");
+                    password.requestFocus();
+                    return;
+                }
+                if (mPass.length()<6){
+                    password.setError("Password Harus lebih dari 6 karakter");
+                    password.requestFocus();
+                    return;
+                }
+                if (mCpas.isEmpty()){
+                    c_password.setError("Confirm Password tidak boleh kosong");
+                    c_password.requestFocus();
+                    return;
+                }
+                if (!mCpas.equals(mPass)){
+                    c_password.setError("Password anda tidak sama");
+                    c_password.requestFocus();
+                    return;
+                }
+
                 Regist();
             }
         });

@@ -9,8 +9,8 @@ import android.view.View;
 import com.dark.amarel.temanbelajar.activities.ListGuru;
 
 public class detail_materi_sekolah extends AppCompatActivity implements View.OnClickListener{
-    CardView sd, smp;
-    int id_sd=2;
+    CardView sd;
+    String id_sd="2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
