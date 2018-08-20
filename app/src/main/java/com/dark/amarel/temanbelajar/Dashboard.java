@@ -20,7 +20,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         sessionManager= new SessionManager(this);
         sessionManager.cekLogin();
 
-        //defining card
+        //defining card3
         materi_sekolah = (CardView) findViewById(R.id.materi_sekolah);
         keterampilan = (CardView) findViewById(R.id.keterampilan);
         bahasa_asing = (CardView) findViewById(R.id.bahasa_asing);
