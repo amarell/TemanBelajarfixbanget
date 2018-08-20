@@ -31,7 +31,8 @@
         <activity android:name=".detail_musik" />
         <activity android:name=".detail_olahraga" />
         <activity android:name=".activities.ListGuru" />
-        <activity android:name=".detail_smp"></activity>
+        <activity android:name=".detail_smp" />
+        <activity android:name=".activities.DetailTentor"></activity>
     </application>
 
 </manifest>
