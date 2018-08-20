@@ -6,19 +6,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_temanbelajar"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/splash"
         android:usesCleartextTraffic="true">
-        <activity android:name=".login_murid">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login_murid"></activity>
         <activity android:name=".form_profil" />
         <activity android:name=".daftar_aktivity" />
         <activity android:name=".MainActivity" />
@@ -31,7 +32,10 @@
         <activity android:name=".detail_musik" />
         <activity android:name=".detail_olahraga" />
         <activity android:name=".activities.ListGuru" />
-        <activity android:name=".detail_smp"></activity>
+        <activity android:name=".detail_smp" />
+        <activity android:name=".detail_sma" />
+        <activity android:name=".detail_sbmptn" />
+
     </application>
 
 </manifest>

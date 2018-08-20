@@ -14,4 +14,8 @@
     <color name="colorLate">#E4B652</color>
     <color name="colorDarkGreen">#325438</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorOrange">#ff8d00</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorClover">#3EA055</color>
+    <color name="colorSeaGreen">#54FF9F</color>
 </resources>
