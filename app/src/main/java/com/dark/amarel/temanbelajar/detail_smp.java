@@ -23,5 +23,6 @@ public class detail_smp extends AppCompatActivity {
                 startActivity(intent); }
         });
         //jh
+
     }
 }

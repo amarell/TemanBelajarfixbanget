@@ -106,7 +106,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundgreen"
+                        android:background="@drawable/circlebackgroundred"
                         android:src="@drawable/smp_bahasa_inggris"
                         android:padding="10dp"/>
                     <TextView
@@ -142,7 +142,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundyellow"
+                        android:background="@drawable/circlebackgroundorange"
                         android:src="@drawable/smp_matematika"
                         android:padding="10dp"/>
                     <TextView
@@ -169,7 +169,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundred"
+                        android:background="@drawable/circlebackgroundgreen"
                         android:src="@drawable/smp_biologi"
                         android:padding="10dp"/>
                     <TextView
@@ -230,7 +230,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundred"
+                        android:background="@drawable/circlebackgroundpink"
                         android:src="@drawable/smp_ekonomi"
                         android:padding="10dp"/>
                     <TextView
@@ -264,7 +264,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundyellow"
+                        android:background="@drawable/circlebackgroundclover"
                         android:src="@drawable/smp_sejarah"
                         android:padding="10dp"/>
                     <TextView
@@ -291,7 +291,7 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/circlebackgroundred"
+                        android:background="@drawable/circlebackgroundseagreen"
                         android:src="@drawable/smp_geografi"
                         android:padding="10dp"/>
                     <TextView
