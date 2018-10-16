@@ -22,7 +22,7 @@ public class detail_smp extends AppCompatActivity {
                 Intent intent = new Intent(detail_smp.this, detail_materi_sekolah.class);
                 startActivity(intent); }
         });
-        //jh
+
 
     }
 }

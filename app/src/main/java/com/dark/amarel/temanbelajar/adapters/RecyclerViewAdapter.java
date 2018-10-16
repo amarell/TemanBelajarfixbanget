@@ -1,16 +1,19 @@
 package com.dark.amarel.temanbelajar.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.dark.amarel.temanbelajar.activities.DetailTentor;
 import com.dark.amarel.temanbelajar.models.DataGuru;
 import com.dark.amarel.temanbelajar.R;
 
@@ -37,8 +40,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         View view;
         LayoutInflater inflater= LayoutInflater.from(mContext);
         view=inflater.inflate(R.layout.guru_row_item, parent, false);
+        final MyViewHolder viewHolder = new MyViewHolder(view);
 
-        return new MyViewHolder(view);
+        viewHolder.view_container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, DetailTentor.class);
+                intent.putExtra("nama_guru", mData.get(viewHolder.getAdapterPosition()).getNama());
+                intent.putExtra("pendidikan", mData.get(viewHolder.getAdapterPosition()).getPendidikan());
+                intent.putExtra("nama_mapel", mData.get(viewHolder.getAdapterPosition()).getNama_mapel());
+                intent.putExtra("deskripsi", mData.get(viewHolder.getAdapterPosition()).getDeskripsi());
+                intent.putExtra("pengalaman", mData.get(viewHolder.getAdapterPosition()).getPengalaman());
+                //intent.putExtra("prestasi", mData.get(viewHolder.getAdapterPosition()).getPrestasi());
+                intent.putExtra("foto_guru", mData.get(viewHolder.getAdapterPosition()).getFoto_profil());
+
+                mContext.startActivity(intent);
+
+            }
+        });
+
+        return viewHolder;
     }
 
     @Override
@@ -63,11 +84,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         TextView tv_nama_guru, tv_pendidikan, tv_mapel, tv_deskripsi, tv_pengalaman;
         ImageView fotoguru;
-
+        LinearLayout view_container;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
+            view_container=itemView.findViewById(R.id.containerguru);
             tv_nama_guru=itemView.findViewById(R.id.rowname);
             tv_pendidikan=itemView.findViewById(R.id.pendidikan);
             tv_mapel=itemView.findViewById(R.id.namamapel);

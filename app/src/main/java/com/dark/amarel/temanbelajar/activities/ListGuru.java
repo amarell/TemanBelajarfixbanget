@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class ListGuru extends AppCompatActivity {
 
-    private static String URL="http://192.168.3.27/temanbelajar/coba.php";
+    private static String URL="http://192.168.43.64/temanbelajar/coba.php";
     private List<DataGuru> listGuru;
     private RecyclerView recyclerView;
 

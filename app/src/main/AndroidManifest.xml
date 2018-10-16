@@ -24,6 +24,7 @@
         <activity android:name=".daftar_aktivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Home" />
+        <activity android:name=".activities.DetailTentor" />
         <activity android:name=".Dashboard" />
         <activity android:name=".detail_materi_sekolah" />
         <activity android:name=".detail_keterampilan" />

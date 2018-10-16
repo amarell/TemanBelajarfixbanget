@@ -7,6 +7,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.dark.amarel.temanbelajar.activities.DetailTentor;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override

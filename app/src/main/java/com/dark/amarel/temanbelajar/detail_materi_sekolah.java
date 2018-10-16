@@ -37,8 +37,8 @@ public class detail_materi_sekolah extends AppCompatActivity implements View.OnC
             case R.id.sd: i=new Intent(this, ListGuru.class);i.putExtra("id", id_sd
                  );startActivity(i);break;
             case R.id.smp: i=new Intent(this, detail_smp.class);startActivity(i);break;
-            case R.id.sma: i=new Intent(this, detail_smp.class);startActivity(i);break;
-            case R.id.sbmptn: i=new Intent(this, detail_smp.class);startActivity(i);break;
+            case R.id.sma: i=new Intent(this, detail_sma.class);startActivity(i);break;
+            case R.id.sbmptn: i=new Intent(this, detail_sbmptn.class);startActivity(i);break;
             default:break;
         }
 

@@ -21,12 +21,12 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         sessionManager.cekLogin();
 
         //defining card3
-        materi_sekolah = (CardView) findViewById(R.id.materi_sekolah);
-        keterampilan = (CardView) findViewById(R.id.keterampilan);
-        bahasa_asing = (CardView) findViewById(R.id.bahasa_asing);
-        komputerisasi = (CardView) findViewById(R.id.komputerisasi);
-        musik = (CardView) findViewById(R.id.musik);
-        olahraga = (CardView) findViewById(R.id.olahraga);
+        materi_sekolah =  findViewById(R.id.materi_sekolah);
+        keterampilan =  findViewById(R.id.keterampilan);
+        bahasa_asing =  findViewById(R.id.bahasa_asing);
+        komputerisasi =  findViewById(R.id.komputerisasi);
+        musik =  findViewById(R.id.musik);
+        olahraga =  findViewById(R.id.olahraga);
 
         //add Click Listener to the cards
         materi_sekolah.setOnClickListener(this);

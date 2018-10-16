@@ -31,7 +31,7 @@ public class daftar_aktivity extends AppCompatActivity {
     private Button btn_regist;
 
     private ProgressBar loading;
-    private static String URL_REGIST = "http://192.168.3.27/temanbelajar/register.php";
+    private static String URL_REGIST = "http://192.168.43.64/temanbelajar/register.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
