@@ -55,6 +55,6 @@ public class SessionManager {
         editor.commit();
         Intent intent = new Intent(context, login_murid.class);
         context.startActivity(intent);
-        ((Home) context).finish();
+        ((Dashboard) context).finish();
     }
 }

@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -17,8 +21,12 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
         sessionManager= new SessionManager(this);
         sessionManager.cekLogin();
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         //defining card3
         materi_sekolah =  findViewById(R.id.materi_sekolah);
@@ -61,5 +69,34 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         case R.id.olahraga: i = new Intent(this, detail_olahraga.class);startActivity(i);break;
         default:break;
     }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        Intent intent;
+
+        if (id == R.id.action_profile) {
+            Toast.makeText(this, "update profil", Toast.LENGTH_SHORT).show();
+            intent = new Intent(this, form_profil.class);
+            startActivity(intent);
+            return true;
+        }else if (id ==R.id.action_cart) {
+            Toast.makeText(this, "daftar Pemesanan", Toast.LENGTH_SHORT).show();
+            return true;
+        }else if (id == R.id.action_logout) {
+            Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+            sessionManager.logout();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

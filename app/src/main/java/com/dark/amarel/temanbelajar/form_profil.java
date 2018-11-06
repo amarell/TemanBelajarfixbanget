@@ -16,19 +16,19 @@ private ImageView back_logo;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_profil);
 
-    Spinner spinner = (Spinner) findViewById(R.id.spinner) ;
+    /*Spinner spinner = (Spinner) findViewById(R.id.spinner) ;
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.jenjang, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter);*/
 
-        back_logo=findViewById(R.id.back_logo);
+        /*back_logo=findViewById(R.id.back_logo);
         back_logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(form_profil.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }
