@@ -6,12 +6,12 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_temanbelajar"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".SplashScreen">
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login_murid"></activity>
+        <activity android:name=".login_murid" />
         <activity android:name=".form_profil" />
         <activity android:name=".daftar_aktivity" />
         <activity android:name=".MainActivity" />
@@ -38,7 +38,7 @@
         <activity android:name=".detail_smp" />
         <activity android:name=".detail_sma" />
         <activity android:name=".detail_sbmptn" />
-
+        <activity android:name=".FormPesanTentor"></activity>
     </application>
 
 </manifest>

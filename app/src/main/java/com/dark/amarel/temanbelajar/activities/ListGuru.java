@@ -79,6 +79,12 @@ public class ListGuru extends AppCompatActivity {
                                     dataGuru.setPrestasi(object.getString("prestasi"));
                                     dataGuru.setFoto_profil(object.getString("foto_profil"));
 
+                                    dataGuru.setId_mengajar(object.getString("id_mengajar"));
+                                    dataGuru.setTarif(object.getString("tarif"));
+                                    dataGuru.setTelpon(object.getString("telpon"));
+
+
+
                                     listGuru.add(dataGuru);
                                 }
 

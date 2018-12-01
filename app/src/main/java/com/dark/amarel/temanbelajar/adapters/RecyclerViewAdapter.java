@@ -51,9 +51,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("nama_mapel", mData.get(viewHolder.getAdapterPosition()).getNama_mapel());
                 intent.putExtra("deskripsi", mData.get(viewHolder.getAdapterPosition()).getDeskripsi());
                 intent.putExtra("pengalaman", mData.get(viewHolder.getAdapterPosition()).getPengalaman());
-                //intent.putExtra("prestasi", mData.get(viewHolder.getAdapterPosition()).getPrestasi());
+                intent.putExtra("prestasi", mData.get(viewHolder.getAdapterPosition()).getPrestasi());
                 intent.putExtra("foto_guru", mData.get(viewHolder.getAdapterPosition()).getFoto_profil());
-
+                
+                intent.putExtra("tarif", mData.get(viewHolder.getAdapterPosition()).getTarif());
+                intent.putExtra("telpon", mData.get(viewHolder.getAdapterPosition()).getTelpon());
+                intent.putExtra("id_mengajar", mData.get(viewHolder.getAdapterPosition()).getId_mengajar());
                 mContext.startActivity(intent);
 
             }
