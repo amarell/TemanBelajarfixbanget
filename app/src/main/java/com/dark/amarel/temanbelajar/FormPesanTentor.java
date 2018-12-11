@@ -59,6 +59,8 @@ public class FormPesanTentor extends AppCompatActivity {
     }
 
     private void transaksi() {
+        /*loading.setVisibility(View.VISIBLE);
+        pesen.setVisibility(View.GONE);*/
 
 
         int mJumlah = Integer.parseInt(this.jumlah.getText().toString().trim());
@@ -83,6 +85,8 @@ public class FormPesanTentor extends AppCompatActivity {
 
                             if (success.equals("1")){
                                 Toast.makeText(FormPesanTentor.this, "Transaksi Berhasil", Toast.LENGTH_SHORT).show();
+                                /*loading.setVisibility(View.GONE);
+                                pesen.setVisibility(View.VISIBLE);*/
                             }
 
                         } catch (JSONException e) {

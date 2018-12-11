@@ -16,6 +16,14 @@ public class SessionManager {
     public static final String NAME="NAME";
     public static final String EMAIL="EMAIL";
     public static final String ID_MURID="ID_MURID";
+    public static final String PASSWORD="PASSWORD";
+    public static final String TELPON="TELPON";
+    public static final String ALAMAT="ALAMAT";
+    public static final String JK="JK";
+    public static final String JENJANG="JENJANG";
+    public static final String FOTO="FOTO";
+    public static final String SEKOLAH="SEKOLAH";
+
 
     public SessionManager(Context context) {
         this.context = context;

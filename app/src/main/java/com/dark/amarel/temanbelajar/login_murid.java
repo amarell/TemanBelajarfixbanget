@@ -107,6 +107,13 @@ public class login_murid extends AppCompatActivity {
                                     String nama = object.getString("nama").trim();
                                     String email = object.getString("email").trim();
                                     String id_murid = object.getString("id").trim();
+                                    String hp = object.getString("hp").trim();
+                                    String password = object.getString("password").trim();
+                                    String alamat = object.getString("alamat").trim();
+                                    String jenjang = object.getString("jenjang").trim();
+                                    String sekolah = object.getString("sekolah").trim();
+                                    String foto = object.getString("foto").trim();
+                                    String jk = object.getString("jk").trim();
 
                                     sessionManager.createSession(nama, email, id_murid);
 

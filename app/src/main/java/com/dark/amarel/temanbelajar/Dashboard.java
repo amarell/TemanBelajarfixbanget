@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dark.amarel.temanbelajar.activities.list_transaksi;
+
 import java.util.HashMap;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener{
@@ -90,6 +92,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
             return true;
         }else if (id ==R.id.action_cart) {
             Toast.makeText(this, "daftar Pemesanan", Toast.LENGTH_SHORT).show();
+            intent = new Intent(this, list_transaksi.class);
+            startActivity(intent);
             return true;
         }else if (id == R.id.action_logout) {
             Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();

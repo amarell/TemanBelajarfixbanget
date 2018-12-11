@@ -3,6 +3,7 @@
     package="com.dark.amarel.temanbelajar">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -38,7 +39,9 @@
         <activity android:name=".detail_smp" />
         <activity android:name=".detail_sma" />
         <activity android:name=".detail_sbmptn" />
-        <activity android:name=".FormPesanTentor"></activity>
+        <activity android:name=".FormPesanTentor" />
+        <activity android:name=".activities.list_transaksi" />
+        <activity android:name=".detail_transaksi"></activity>
     </application>
 
 </manifest>
