@@ -51,23 +51,12 @@
 
 
             <TextView
-                android:id="@+id/namamapel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Nama Mapel" />
-            <TextView
                 android:id="@+id/deskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="deskripsi" />
-            <TextView
-                android:id="@+id/pengalaman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="pengalaman" />
+
 
         </LinearLayout>
 

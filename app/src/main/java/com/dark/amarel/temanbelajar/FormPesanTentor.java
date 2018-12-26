@@ -1,5 +1,7 @@
 package com.dark.amarel.temanbelajar;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -61,7 +63,9 @@ public class FormPesanTentor extends AppCompatActivity {
     private void transaksi() {
         /*loading.setVisibility(View.VISIBLE);
         pesen.setVisibility(View.GONE);*/
-
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Saving broo...");
+        progressDialog.show();
 
         int mJumlah = Integer.parseInt(this.jumlah.getText().toString().trim());
         final String mJam = this.jam.getText().toString().trim();
@@ -78,6 +82,7 @@ public class FormPesanTentor extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        progressDialog.dismiss();
 
                         try {
                             JSONObject jsonObject = new JSONObject(response);
@@ -85,6 +90,8 @@ public class FormPesanTentor extends AppCompatActivity {
 
                             if (success.equals("1")){
                                 Toast.makeText(FormPesanTentor.this, "Transaksi Berhasil", Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(FormPesanTentor.this, Dashboard.class);
+                                startActivity(i);
                                 /*loading.setVisibility(View.GONE);
                                 pesen.setVisibility(View.VISIBLE);*/
                             }

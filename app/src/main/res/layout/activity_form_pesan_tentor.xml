@@ -55,7 +55,7 @@
         <EditText
             android:id="@+id/Et_jam_pertemuan"
             android:drawablePadding="20dp"
-            android:inputType="time"
+            android:inputType="text"
             android:drawableRight="@drawable/ic_email"
             android:hint="16:40"
             android:layout_width="match_parent"

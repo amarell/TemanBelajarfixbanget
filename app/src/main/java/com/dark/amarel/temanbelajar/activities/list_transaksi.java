@@ -53,6 +53,7 @@ public class list_transaksi extends AppCompatActivity {
         HashMap<String, String> user = sessionManager.getUserDetail();
 
          String id_murid = String.valueOf(user.get(sessionManager.ID_MURID));
+        final String token = String.valueOf(user.get(sessionManager.TOKEN));
        final  String id_murid2 = id_murid;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
@@ -107,6 +108,7 @@ public class list_transaksi extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("id", id_murid2);
+                params.put("token", token);
                 return params;
             }
         };

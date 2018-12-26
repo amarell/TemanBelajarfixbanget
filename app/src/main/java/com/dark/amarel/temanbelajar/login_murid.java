@@ -114,8 +114,9 @@ public class login_murid extends AppCompatActivity {
                                     String sekolah = object.getString("sekolah").trim();
                                     String foto = object.getString("foto").trim();
                                     String jk = object.getString("jk").trim();
+                                    String token = object.getString("token").trim();
 
-                                    sessionManager.createSession(nama, email, id_murid);
+                                    sessionManager.createSession(nama, email, id_murid, token);
 
                                     Toast.makeText(login_murid.this, "Login Berhasil. \nNama Anda: "+nama+ "\nEmail anda: " + email, Toast.LENGTH_SHORT).show();
                                     loading.setVisibility(View.GONE);

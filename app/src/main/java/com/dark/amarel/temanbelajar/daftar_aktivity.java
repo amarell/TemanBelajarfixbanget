@@ -22,6 +22,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -119,6 +122,7 @@ public class daftar_aktivity extends AppCompatActivity {
         final String email = this.email.getText().toString().trim();
         final String hp = this.hp.getText().toString().trim();
         final String password = this.password.getText().toString().trim();
+        final String token = getMd5(this.nama.getText().toString().trim());
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
                 new Response.Listener<String>() {
@@ -132,6 +136,8 @@ public class daftar_aktivity extends AppCompatActivity {
                                 loading.setVisibility(View.GONE);
                                 btn_regist.setVisibility(View.VISIBLE);
                                 Toast.makeText(daftar_aktivity.this, "Register berhasil", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(daftar_aktivity.this, login_murid.class);
+                                startActivity(intent);
                             }
 
                         } catch (JSONException e) {
@@ -159,6 +165,7 @@ public class daftar_aktivity extends AppCompatActivity {
                 params.put("email", email);
                 params.put("password", password);
                 params.put("hp", hp);
+                params.put("token", token);
                 return params;
             }
         };
@@ -166,5 +173,32 @@ public class daftar_aktivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
+    }
+    public static String getMd5(String input)
+    {
+        try {
+
+            // Static getInstance method is called with hashing MD5
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // digest() method is called to calculate message digest
+            //  of an input digest() return array of byte
+            byte[] messageDigest = md.digest(input.getBytes());
+
+            // Convert byte array into signum representation
+            BigInteger no = new BigInteger(1, messageDigest);
+
+            // Convert message digest into hex value
+            String hashtext = no.toString(16);
+            while (hashtext.length() < 32) {
+                hashtext = "0" + hashtext;
+            }
+            return hashtext;
+        }
+
+        // For specifying wrong message digest algorithms
+        catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

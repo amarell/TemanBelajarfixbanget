@@ -210,6 +210,10 @@ public class form_profil extends AppCompatActivity {
         final String alamat = this.alamat.getText().toString().trim();
         final String sekolah = this.sekolah.getText().toString().trim();
 
+        HashMap<String, String> user = sessionManager.getUserDetail();
+
+
+        final String token = String.valueOf(user.get(sessionManager.TOKEN));
         final String id= idmurid;
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -227,7 +231,7 @@ public class form_profil extends AppCompatActivity {
                             String success= jsonObject.getString("success");
                             if (success.equals("1")){
                                 Toast.makeText(form_profil.this, "Berhasil Disimpan", Toast.LENGTH_SHORT).show();
-                                sessionManager.createSession(nama, email, id);
+                                sessionManager.createSession(nama, email, id, token);
                             }
                         } catch (JSONException e) {
                             progressDialog.dismiss();

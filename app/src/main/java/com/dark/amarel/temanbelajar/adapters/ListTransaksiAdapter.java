@@ -48,6 +48,7 @@ public class ListTransaksiAdapter extends RecyclerView.Adapter<ListTransaksiAdap
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, detail_transaksi.class );
+                intent.putExtra("id_kursus", mData.get(myViewHolder.getAdapterPosition()).getId_kursus());
                 intent.putExtra("namaguru", mData.get(myViewHolder.getAdapterPosition()).getNama_tentor());
                 intent.putExtra("statusbayar", mData.get(myViewHolder.getAdapterPosition()).getStatus_bayar());
                 intent.putExtra("statusles", mData.get(myViewHolder.getAdapterPosition()).getStatus_les());
@@ -55,7 +56,7 @@ public class ListTransaksiAdapter extends RecyclerView.Adapter<ListTransaksiAdap
                 intent.putExtra("hari", mData.get(myViewHolder.getAdapterPosition()).getHari_les());
                 intent.putExtra("jam", mData.get(myViewHolder.getAdapterPosition()).getJam_les());
                 intent.putExtra("jumlahpertemuan", mData.get(myViewHolder.getAdapterPosition()).getJumlah_pertemuan());
-                intent.putExtra("foto_guru", mData.get(myViewHolder.getAdapterPosition()).getFoto_profil());
+                intent.putExtra("foto_guru", "http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(myViewHolder.getAdapterPosition()).getFoto_profil());
                 mContext.startActivity(intent);
             }
         });
@@ -68,12 +69,12 @@ public class ListTransaksiAdapter extends RecyclerView.Adapter<ListTransaksiAdap
         holder.nama.setText(mData.get(position).getNama_tentor());
         holder.mapel.setText(mData.get(position).getNama_mapel());
         holder.status.setText(mData.get(position).getStatus_booking());
-        Glide.with(mContext).load(mData.get(position).getFoto_profil()).apply(option).into(holder.imageView);
+        Glide.with(mContext).load("http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(position).getFoto_profil()).apply(option).into(holder.imageView);
 
         int panjang=mData.get(position).getTelpon_tentor().length();
 
         String apiwa="https://api.whatsapp.com/send?phone=";
-        final String url = apiwa+"+62"+mData.get(position).getTelpon_tentor().substring(1, panjang);
+        final String url = apiwa+"+62"+mData.get(position).getTelpon_tentor();
         final String telpon="+62"+mData.get(position).getTelpon_tentor().substring(1, panjang);
         holder.chat.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override

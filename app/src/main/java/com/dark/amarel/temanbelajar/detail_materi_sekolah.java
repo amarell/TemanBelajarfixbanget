@@ -9,19 +9,22 @@ import android.view.View;
 import com.dark.amarel.temanbelajar.activities.ListGuru;
 
 public class detail_materi_sekolah extends AppCompatActivity implements View.OnClickListener{
-    CardView sd,smp,sma,sbmptn;
+    CardView sd,smp,sma,sbmptn,bta;
     String id_sd="2";
+    String id_bta="1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_materi_sekolah);
 
+        bta=findViewById(R.id.baca_tulis_hitung);
         sd = findViewById(R.id.sd);
         smp = findViewById(R.id.smp);
         sma = findViewById(R.id.sma);
         sbmptn = findViewById(R.id.sbmptn);
 
+        bta.setOnClickListener(this);
         sd.setOnClickListener(this);
         smp.setOnClickListener(this);
         sma.setOnClickListener(this);
@@ -34,6 +37,8 @@ public class detail_materi_sekolah extends AppCompatActivity implements View.OnC
         Intent i;
 
         switch (view.getId()){
+            case R.id.baca_tulis_hitung: i=new Intent(this, ListGuru.class);i.putExtra("id", id_bta
+            );startActivity(i);break;
             case R.id.sd: i=new Intent(this, ListGuru.class);i.putExtra("id", id_sd
                  );startActivity(i);break;
             case R.id.smp: i=new Intent(this, detail_smp.class);startActivity(i);break;

@@ -52,7 +52,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("deskripsi", mData.get(viewHolder.getAdapterPosition()).getDeskripsi());
                 intent.putExtra("pengalaman", mData.get(viewHolder.getAdapterPosition()).getPengalaman());
                 intent.putExtra("prestasi", mData.get(viewHolder.getAdapterPosition()).getPrestasi());
-                intent.putExtra("foto_guru", mData.get(viewHolder.getAdapterPosition()).getFoto_profil());
+                intent.putExtra("foto_guru", "http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(viewHolder.getAdapterPosition()).getFoto_profil());
                 
                 intent.putExtra("tarif", mData.get(viewHolder.getAdapterPosition()).getTarif());
                 intent.putExtra("telpon", mData.get(viewHolder.getAdapterPosition()).getTelpon());
@@ -69,12 +69,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.tv_nama_guru.setText(mData.get(position).getNama());
         holder.tv_pendidikan.setText(mData.get(position).getPendidikan());
-        holder.tv_mapel.setText(mData.get(position).getNama_mapel());
         holder.tv_deskripsi.setText(mData.get(position).getDeskripsi());
 
-        holder.tv_pengalaman.setText(mData.get(position).getPengalaman());
-
-        Glide.with(mContext).load(mData.get(position).getFoto_profil()).apply(option).into(holder.fotoguru);
+        Glide.with(mContext).load("http://192.168.43.64/webtemanbelajar/dokumen/profil/"+mData.get(position).getFoto_profil()).apply(option).into(holder.fotoguru);
 
     }
 
@@ -95,9 +92,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             view_container=itemView.findViewById(R.id.containerguru);
             tv_nama_guru=itemView.findViewById(R.id.rowname);
             tv_pendidikan=itemView.findViewById(R.id.pendidikan);
-            tv_mapel=itemView.findViewById(R.id.namamapel);
             tv_deskripsi=itemView.findViewById(R.id.deskripsi);
-            tv_pengalaman=itemView.findViewById(R.id.pengalaman);
             fotoguru=itemView.findViewById(R.id.thumbnail);
         }
     }
